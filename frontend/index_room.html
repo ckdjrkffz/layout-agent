@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-lines@^1.1.0/lines.js"></script>
+        <script src="js/register_component.js" type="module"></script>
+    </head>
+    <body>
+        <a-scene
+            id="main_scene"
+            light="defaultLightsEnabled: false"
+            operate_ui
+            initialize_field
+            device-orientation-permission-ui="enabled: false">
+
+            <!-- load asset -->
+            <a-assets id="asset">
+                <img id="floor_img" src="../assets/house_floor.png">
+                <img id="wall_img" src="../assets/house_wall.png">
+                <img id="cursor_img" src="../assets/cursor.png">
+            </a-assets id="asset">
+
+            <!-- camera -->
+            <!-- +z: forward、+x: right、+y:height direction -->
+            <a-entity id="camera_wrapper" camera_wrapper>
+                <a-entity id="camera_wrapper2" camera_wrapper2>
+                    <a-camera wasd-controls="enabled: false"></a-camera>
+                </a-entity>
+            </a-entity>
+
+            <!-- cursor -->
+            <a-plane id="cursor" class="img" name="cursor" src="#cursor_img" position="0 0.1 0" rotation="-90 0 0" scale="1.6 1.6 1.6" transparent="true"></a-plane>
+
+            <!-- light -->
+            <a-entity light="type: ambient; color: #ffffff; intensity: 0.8"></a-entity>
+
+            <a-entity light="type: directional; color: #ffffff; intensity: 0.5" position="0 1 0"></a-entity>
+
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="-1 0 0"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="1 0 0"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="0 0 -1"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="0 0 1"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="-1 0 -1"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="-1 0 1"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="1 0 -1"></a-entity>
+            <a-entity light="type: directional; color: #ffffff; intensity: 2.0" position="1 0 1"></a-entity>
+
+            <!-- sky -->
+            <a-sky color="#ECECEC"></a-sky>
+
+            <!-- floor -->
+            <a-box id="floor" class="room" name="floor" color="#f0e68c" position="0 0 0" rotation="0 0 0" scale="11 0.001 9"></a-box>
+
+            <!-- wall -->
+            <a-box id="wall-left" class="room" name="wall-left" color="#800000" position="6 0 0" rotation="0 0 0" scale="1 0.01 9"></a-box>
+            <a-box id="wall-right" class="room" name="wall-right" color="#800000" position="-6 0 0" rotation="0 0 0" scale="1 0.01 9"></a-box>
+            <a-box id="wall-front" class="room" name="wall-front" color="#800000" position="0 0 4" rotation="0 0 0" scale="13 0.01 1"></a-box>
+            <a-box id="wall-down" class="room" name="wall-back" color="#800000" position="0 0 -4" rotation="0 0 0" scale="13 0.01 1"></a-box>
+
+        </a-scene>
+    </body>
+</html>

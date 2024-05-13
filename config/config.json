@@ -1,0 +1,10 @@
+{
+    "openai_api_key": "",
+    "frontend": {
+        "port": 23403
+    },
+    "backend": {
+        "ip": "xxx",
+        "port": 25032
+    }
+}

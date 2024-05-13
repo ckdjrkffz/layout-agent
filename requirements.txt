@@ -1,0 +1,6 @@
+flask==2.3.3
+flask_cors==3.0.10
+shap-e@git+https://github.com/openai/shap-e
+trimesh==3.21.7
+PyYAML==6.0
+ipywidgets==8.0.6
