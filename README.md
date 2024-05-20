@@ -6,9 +6,8 @@ This is code of our paper "Layout Generation Agents with Large Language Models".
 
 <div align="center">
     Demo movie<br>
-    <movie src="https://github.com/ckdjrkffz/layout-agent/assets/129842419/950ddfeb-2368-48f0-ad70-66d02a02f89f">
+    <movie src="https://github.com/ckdjrkffz/layout-agent/assets/129842419/23142c95-b7c1-4550-b7d6-4ed2d37b2f4d">
 </div>
-<br><br>
 
 <div align="center">
     Task overview<br>
