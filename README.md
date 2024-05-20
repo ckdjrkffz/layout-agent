@@ -2,7 +2,7 @@
 
 This is code of our paper "Layout Generation Agents with Large Language Models". When you input user instructions, a language model-driven agent places objects in the virtual space to create a layout that reflects the instructions.
 
-[arXiv](https://arxiv.org/pdf/2405.08037)
+[Paper Link (arXiv)](https://arxiv.org/pdf/2405.08037)
 
 <div align="center">
     Demo movie<br>
